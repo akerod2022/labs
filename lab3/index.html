@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 3</title>
+</head>
+<body>
+    <h1>Лабораторна робота №3</h1>
+    <h3>Персональна інформація</h3>
+
+    <form action="">
+        <fieldset>
+            <legend>Provide your details</legend> 
+
+            <div>Full name</div>
+            <input type="text">
+
+            <div>Email</div>
+            <input type="email">
+
+            <div>Password</div>
+            <input type="password">
+
+            <div>Date of Birth</div>
+            <input type="date">
+
+            <div>Gender</div>
+            <input type="radio" id="Male" value="Male" name="gender">
+            <label for="male">Male</label><br>
+            <input type="radio" id="Male" value="Male" name="gender">
+            <label for="male">Female</label><br>
+            <input type="radio" id="Male" value="Male" name="gender">
+            <label for="male">Other</label><br>
+
+            <div>Languages Known</div>
+            <input type="checkbox">
+            <label for="Male">English</label><br>
+            <input type="checkbox">
+            <label for="Male">Spanish</label><br>
+            <input type="checkbox">
+            <label for="Male">French</label><br>
+
+            <div>Country</div>
+            <select>
+                <option disabled="disables" selected="selected">Оберіть країну</option>
+                <option>Україна</option>
+                <option>Польща</option>
+                <option>Угорщина</option>
+                <option>Румунія</option>
+            </select>
+        </fieldset>
+    </form>
+
+        <h3>Предмети в коледжі</h3>
+
+        <form action="">
+            <fieldset>
+                <legend>Provide your details</legend>
+
+                <div>College Subjects</div>
+                <select multiple>
+                    <option disabled="disables" selected="selected">Оберіть предмети</option>
+                    <option>Інформатика</option>
+                    <option>Фізкультура</option>
+                    <option>Біологія</option>
+                    <option>Хімія</option>
+                </select>
+
+                <div>Rate Interest in Computer Science</div>
+                <input type="range" name="" id="">
+            </fieldset>
+        </form>
+
+        <h3>Skill assetment</h3>
+        <form action="">
+            <fieldset>Provide your details</fieldset>
+
+            <div>Describe your skills</div>
+            <textarea name="" id="" cols="100" rows="10"></textarea><br>
+
+            <span>Upload your resume</span>
+            <input type="file"><br>
+
+            <span>Pick your favourite color</span>
+            <input type="color" name="" id=""><br>
+
+            <span>Prefered your study time</span>
+            <input type="time"><br>
+
+            <input type="submit">
+        </form>
+</body>
+</html>
