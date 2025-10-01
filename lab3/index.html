@@ -10,21 +10,21 @@
     <h1>Лабораторна робота №3</h1>
     <h3>Персональна інформація</h3>
 
-    <form action="">
+    <form action="." method="post" enctype="multipart/form-data">
         <fieldset>
             <legend>Provide your details</legend> 
 
             <div>Full name</div>
-            <input type="text">
+            <input type="text" name="name" required>
 
             <div>Email</div>
-            <input type="email">
+            <input type="email" name="email" required>
 
             <div>Password</div>
-            <input type="password">
+            <input type="password" name="password" required>
 
             <div>Date of Birth</div>
-            <input type="date">
+            <input type="date" name="birth">
 
             <div>Gender</div>
             <input type="radio" id="Male" value="Male" name="gender">
@@ -35,15 +35,15 @@
             <label for="male">Other</label><br>
 
             <div>Languages Known</div>
-            <input type="checkbox">
+            <input type="checkbox" name="language">
             <label for="Male">English</label><br>
-            <input type="checkbox">
+            <input type="checkbox" name="language">
             <label for="Male">Spanish</label><br>
-            <input type="checkbox">
+            <input type="checkbox" name="language">
             <label for="Male">French</label><br>
 
             <div>Country</div>
-            <select>
+            <select name="country">
                 <option disabled="disables" selected="selected">Оберіть країну</option>
                 <option>Україна</option>
                 <option>Польща</option>
@@ -51,16 +51,16 @@
                 <option>Румунія</option>
             </select>
         </fieldset>
-    </form>
+    
 
         <h3>Предмети в коледжі</h3>
 
-        <form action="">
+        
             <fieldset>
                 <legend>Provide your details</legend>
 
                 <div>College Subjects</div>
-                <select multiple>
+                <select multiple name="subjects">
                     <option disabled="disables" selected="selected">Оберіть предмети</option>
                     <option>Інформатика</option>
                     <option>Фізкультура</option>
@@ -69,27 +69,28 @@
                 </select>
 
                 <div>Rate Interest in Computer Science</div>
-                <input type="range" name="" id="">
+                <input type="range" name="" id="" name="interest">
             </fieldset>
-        </form>
+        
 
         <h3>Skill assetment</h3>
-        <form action="">
-            <fieldset>Provide your details</fieldset>
-
+            <fieldset>
+            <legend>Provide your details</legend>
+        
             <div>Describe your skills</div>
-            <textarea name="" id="" cols="100" rows="10"></textarea><br>
+            <textarea name="skills" id="" cols="100" rows="10"></textarea><br>
 
             <span>Upload your resume</span>
-            <input type="file"><br>
+            <input type="file" name="resume"><br>
 
             <span>Pick your favourite color</span>
-            <input type="color" name="" id=""><br>
+            <input type="color" name="color" id=""><br>
 
             <span>Prefered your study time</span>
-            <input type="time"><br>
+            <input type="time" name="time"><br>
 
             <input type="submit">
+            </fieldset>
         </form>
 </body>
 </html>
