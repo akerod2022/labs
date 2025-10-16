@@ -1,39 +1,57 @@
 <!DOCTYPE html>
 <html lang="uk">
+
 <head>
   <meta charset="utf-8">
   <title>PW1 — Карта зображень</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
+
 <body>
   <h1>Практична робота №1 — Карта зображень</h1>
+  <h2>Завдання 1</h2>
 
   <img src="v1.jpg" alt="Робочий стіл: комп’ютер, телефон, кава" usemap="#deskmap">
 
   <map name="deskmap" id="deskmap">
     <!-- Комп’ютер (прямокутник) -->
-    <area shape="rect"
-          coords="52,54,317,327"
-          href="https://rozetka.com.ua/computers-notebooks/c80253/"
-          target="_blank"
-          alt="Комп’ютер">
+    <area shape="rect" coords="52,54,317,327" href="https://rozetka.com.ua/computers-notebooks/c80253/" target="_blank"
+      alt="Комп’ютер">
 
     <!-- Телефон (полігон)-->
-    <area shape="poly"
-          coords="306,146,340,141,355,237,322,243"
-          href="https://rozetka.com.ua/ua/mobile-phones/c80003/"
-          target="_blank"
-          alt="Телефон">
+    <area shape="poly" coords="306,146,340,141,355,237,322,243" href="https://rozetka.com.ua/ua/mobile-phones/c80003/"
+      target="_blank" alt="Телефон">
 
     <!-- Кава (коло) -->
-    <area shape="circle"
-          coords="323,315,46"
-          href="https://rozetka.com.ua/ua/coffee/c3600085/"
-          target="_blank"
-          alt="Кава">
+    <area shape="circle" coords="323,315,46" href="https://rozetka.com.ua/ua/coffee/c3600085/" target="_blank"
+      alt="Кава">
 
     <area shape="default" alt="">
   </map>
-</body>
-</html>
 
+  <h2>Завдання 2</h2>
+  <table border="1" cellpadding="5" cellspacing="0">
+
+    <tr>
+      <td></td>
+      <td colspan="2">Клітинка 1</td>
+    </tr>
+
+    <tr>
+      <td rowspan="2" colspan="2">Клітинка 2</td>
+      <td>Клітинка 4</td>
+    </tr>
+
+    <tr>
+      <td>Клітинка 5</td>
+    </tr>
+
+    <tr>
+      <td>Клітинка 6</td>
+      <td>Клітинка 7</td>
+      <td>Клітинка 8</td>
+    </tr>
+  </table>
+</body>
+
+</html>
