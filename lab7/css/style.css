@@ -1,52 +1,62 @@
-* {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-}
-.fontyourface {
-  font-family: 'Roboto';
-  font-style: normal;
-  font-weight: normal;
-}
 body {
-  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
-  font-size: 14px;
-  line-height: 1.42857143;
-  color: #333;
-  background: #C2C2C2;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
+    margin: 0;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    background-color: #e5e5e5;
+    box-sizing: border-box;
 }
-.container {
-  width: 750px;
+
+*, *:before, *:after {
+    box-sizing: inherit;
 }
-* {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
+
+.flex-wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
-.block-views-blockfront-page-news-block-2 {
-  margin-top: 3rem;
+
+.card-item {
+    position: relative;
+    flex: 0 0 calc(50% - 10px);
+    background-color: #fff;
+    overflow: hidden;
 }
-.form-group:last-child, .panel:last-child, p:last-child {
-  margin-bottom: 0;
+
+.card-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
 }
-.form-group {
-  margin-bottom: 15px;
+
+.text-overlay {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    pointer-events: none;
 }
-.row {
-  margin-right: -15px;
-  margin-left: -15px;
+
+.highlight {
+    background-color: #2a2a57;
+    color: #ffffff;
+    padding: 4px 8px;
+    font-size: 18px;
+    line-height: 1.4;
+    margin-bottom: 2px;
+    display: inline-block;
 }
-.views-view-grid .views-col {
-  float: left;
-}
-.col-sm-6 {
-    width: 50%;
-  }
-featured_container a:link {
-  color: #fff;
-  text-decoration: none;
-  transition: color 3s ease-out;
+
+@media (max-width: 768px) {
+    .card-item {
+        flex: 0 0 100%;
+    }
 }
