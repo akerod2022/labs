@@ -1,0 +1,182 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    background-color: #333;
+    padding: 10px;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.menu-toggle {
+    display: none;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    margin: 0;
+    padding: 0;
+}
+
+.menu li a {
+    color: white;
+    text-decoration: none;
+}
+
+.menu-icon {
+    display: none;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    /* ВИДАЛЕНО align-items: start, щоб колонки були однакової висоти */
+}
+
+.news-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.news-item {
+    border: 1px solid #ddd;
+    padding: 10px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.news-item img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.aside-ad {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    height: 100%; /* Блок займає всю висоту колонки */
+}
+
+.ad-item {
+    background-color: gold;
+    padding: 20px;
+    text-align: center;
+    height: 100%; /* Жовтий фон розтягується до самого низу */
+    box-sizing: border-box; /* Щоб padding не ламав висоту */
+    display: flex;
+    align-items: center; /* Центруємо текст "Реклама" по центру великого блоку */
+    justify-content: center;
+}
+
+.ad-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* --- Медіа-запити --- */
+
+@media (max-width: 767px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .menu {
+        display: none;
+        flex-direction: column;
+        background-color: #333;
+        position: absolute;
+        top: 50px;
+        left: 0;
+        width: 100%;
+        padding: 0;
+        z-index: 1000;
+    }
+
+    .menu li {
+        text-align: center;
+        padding: 10px 0;
+        border-bottom: 1px solid #444;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+
+    .menu-toggle:checked + .menu-icon + .menu {
+        display: flex;
+    }
+
+    .aside-ad {
+        width: 100%;
+        height: auto; /* На мобільних висота автоматична */
+    }
+
+    .ad-item {
+        width: 100%;
+        height: auto; /* На мобільних розтягувати не треба */
+    }
+
+    .news-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+    .news-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .news-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .container {
+        grid-template-columns: 2fr 1fr;
+    }
+}
+
+@media (min-width: 1025px) and (max-width: 1200px) {
+    .news-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (min-width: 1201px) and (max-width: 1440px) {
+    .news-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    .container {
+        max-width: 1400px;
+    }
+}
+
+@media (min-width: 1441px) {
+    .news-grid {
+        grid-template-columns: repeat(6, 1fr);
+    }
+    .container {
+        max-width: 95%;
+    }
+}
