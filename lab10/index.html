@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 10</title>
+</head>
+<body>
+	<h1>Лабораторна робота 10</h1>   
+	<h3>Завдання 1:</h3>
+	<p>
+    Передбачте результат виконання, потім запустіть код та поясніть його.</br>
+    console.log(a); // ?</br>
+    var a = 10;</br>
+    console.log(b); // ?</br>
+    let b = 20;</br>
+    console.log(c); // ?</br>
+    const c = 30;</br>
+    Відповідь: Не можна вивести значення змінної перед її ініціалізацією
+  </p>
+	<h3>Завдання 2:</h3>
+	<p>
+    Передбачте результат виконання, потім запустіть код та поясніть його.</br>
+    console.log(a); // ?</br>
+    var a = 10;</br>
+    console.log(b); // ?</br>
+    let b = 20;</br>
+    console.log(c); // ?</br>
+    const c = 30;</br>
+    Відповідь: Через обмеження зони видимості буде доступна тільки змінна a, тому що вона оголошена через "var"
+  </p>
+	<h3>Завдання 3:</h3>
+	<p>
+	Передбачте результати виконання коду: </br>
+		console.log(5 + "5");  // ?</br>
+		console.log("5" - 2);  // ?</br>
+		console.log(true + false);  // ?</br>
+		console.log(null + 1);  // ?</br>
+		console.log(undefined + 1);  // ?</br>
+		console.log(0 == false);  // ?</br>
+		console.log(0 === false); // ?</br>
+</br>
+    Відповідь:</br>
+		55, як string</br>
+		3</br>
+		1</br>
+		1</br>
+		NaN</br>
+		true</br>
+		false</br>
+  </p>
+	<h3>Завдання 4:</h3>
+	<p>
+	Запустіть код, поясніть результати.</br>
+	Використовуйте Object.freeze(), щоб зробити person незмінним.</br>
+	const person = {</br>
+		name: "John",</br>
+		age: 30</br>
+	};</br>
+</br>
+	person.age = 31; </br>
+	person.city = "New York"; </br>
+	console.log(person); // ?</br>
+</br>
+	person = { name: "Alice", age: 25 }; // Чи спрацює?</br>
+
+    Відповідь:</br>
+	person = { name: "Alice", age: 25 }; - Не спрацює тому що не можна змінити значення константи
+  </p>
+	<h3>Завдання 5:</h3>
+	<p>
+	Реалізуйте функцію checkType(value), яка визначає тип переданого значення.</br>
+	function checkType(value) {</br>
+		// Ваш код</br>
+	}</br>
+</br>
+	console.log(checkType(10));  // "number"</br>
+	console.log(checkType("Hello"));  // "string"</br>
+	console.log(checkType(null));  // "object"</br>
+</br>
+    Відповідь:</br>
+</br>
+	function checkType(val) {</br>
+		var typeName = typeof(val);</br>
+		console.log("Type: " + typeName);</br>
+	}</br>
+</br>
+	checkType("abcd");</br>
+	checkType(true);</br>
+	checkType(12);</br>
+</br>
+	Type: string</br>
+	Type: boolean</br>
+	Type: number</br>
+  </p>
+</body>
+</html>
