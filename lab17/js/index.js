@@ -84,8 +84,30 @@ document.addEventListener("DOMContentLoaded", () => {
     submitBtn.disabled = true;
 
     if (isEditing && currentEditId) {
-      alert("Завдання 2 - збереження змін (PUT)"); //// закоментуйте alert після виконання завдання
-      // !!!!!!!!!!!!!! Ващ код !!!!!!!!!!!!!!!!
+      try {
+        const response = await fetch(`${API_URL}/${currentEditId}`, {
+          method: "PUT",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(taskData),
+        });
+
+        if (!response.ok) throw new Error("Помилка сервера");
+
+        const updatedTask = await response.json();
+        const card = document.querySelector(`.task-card[data-id="${currentEditId}"]`);
+        
+        if (card) {
+          card.querySelector(".task-card__title").textContent = updatedTask.title;
+          card.querySelector(".task-card__desc").textContent = updatedTask.description;
+          card.querySelector(".task-card__tag").textContent = updatedTask.tag;
+          card.querySelector(".task-card__deadline").textContent = updatedTask.deadline || "Без дати";
+        }
+        
+        resetFormState();
+      } catch (error) {
+        console.error("Помилка оновлення:", error);
+        alert("Не вдалося оновити запис.");
+      }
     } else {
       try {
         const response = await fetch(API_URL, {
@@ -127,8 +149,17 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (btn.classList.contains("btn--delete")) {
       if (confirm("Видалити цю задачу з сервера?")) {
-        alert("Завдання 1 - Функція видалення (DELETE)"); // закоментуйте alert після виконання завдання
-        // !!!!!!!!!!!!!! Ващ код !!!!!!!!!!!!!!!!
+        try {
+          const response = await fetch(`${API_URL}/${taskId}`, {
+            method: "DELETE",
+          });
+
+          if (!response.ok) throw new Error("Помилка видалення");
+          card.remove();
+        } catch (error) {
+          console.error("Помилка видалення:", error);
+          alert("Не вдалося видалити запис.");
+        }
       }
     }
 
